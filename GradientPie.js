@@ -106,7 +106,7 @@ GradientPie.prototype = {
         }
 	me.pvtInterval = setInterval(function () {
             me.pvtDraw.call(me);
-        }, 500);
+        }, 100);
     },
     /* public methods */
     prepareNode: function (nodeToAppend) {
