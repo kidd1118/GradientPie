@@ -240,9 +240,12 @@ GradientPie.prototype = {
         this.pvtGs.setAttribute("filter", "url(#shadow2)");
 
         this.pvtText.style.fontSize = this.options.textSize + "px";
+        this.pvtText.style.color = "gray";
         this.pvtTextUnit.style.fontSize = "17px";
+        this.pvtTextUnit.style.color = "gray";
         this.pvtTextUnit.textContent = " %";
         this.pvtTextDesc.style.fontSize = "17px";
+        this.pvtTextDesc.style.color = "gray";
         this.pvtTextDesc.textContent = "Used"
         this.pvtTextDesc.className = "text";
 
@@ -292,10 +295,10 @@ GradientPie.prototype = {
 
     refresh: function () {
 
-        //if (!this.getWidth()) this.pvtSVG.setAttribute("width", this.options.radius * 2);
-        //if (!this.getHeight()) this.pvtSVG.setAttribute("height", this.options.radius * 2);
-	this.pvtSVG.setAttribute("width", 250);
-	this.pvtSVG.setAttribute("height", 250);
+        if (!this.getWidth()) this.pvtSVG.setAttribute("width", this.options.radius * 2);
+        else this.pvtSVG.setAttribute("width", this.getWidth());
+        if (!this.getHeight()) this.pvtSVG.setAttribute("height", this.options.radius * 2);
+        else this.pvtSVG.setAttribute("height", this.getHeight());
 
         this.pvtCenter.x = Math.max(this.getWidth() / 2, this.options.radius);
         this.pvtCenter.y = Math.max(this.getHeight() / 2, this.options.radius);
