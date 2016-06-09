@@ -13,7 +13,7 @@
         
         document.getElementById("data").value = "0.9";
         document.getElementById("set").onclick = function() {
-            pie.setValue(document.getElementById("data").value);
+            pie.setValue(Number(document.getElementById("data").value));
         };
     }
 </script>
