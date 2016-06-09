@@ -10,10 +10,17 @@
         pie.setHeight(200);
         pie.render(document.getElementById("ap"));
         pie.setValue(0.9);
+        
+        document.getElementById("data").value = "0.9";
+        document.getElementById("set").onclick = function() {
+            pie.setValue(document.getElementById("data").value);
+        };
     }
 </script>
 </head>
 <body>
     <div id="ap" />
+    <input id="data"></input>
+    <button id="set">set</button>
 </body>
 </html>
