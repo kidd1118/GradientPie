@@ -291,8 +291,10 @@ GradientPie.prototype = {
 
     refresh: function () {
 
-        if (!this.getWidth()) this.pvtSVG.setAttribute("width", this.options.radius * 2);
-        if (!this.getHeight()) this.pvtSVG.setAttribute("height", this.options.radius * 2);
+        //if (!this.getWidth()) this.pvtSVG.setAttribute("width", this.options.radius * 2);
+        //if (!this.getHeight()) this.pvtSVG.setAttribute("height", this.options.radius * 2);
+	this.pvtSVG.setAttribute("width", 200);
+	this.pvtSVG.setAttribute("height", 200);
 
         this.pvtCenter.x = Math.max(this.getWidth() / 2, this.options.radius);
         this.pvtCenter.y = Math.max(this.getHeight() / 2, this.options.radius);
