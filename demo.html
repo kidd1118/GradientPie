@@ -2,19 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title><script type="text/javascript" src="GradientPie.js"></script>
-</head>
-<body>
-</body>
-<script type="text/javascript">
+    <script type="text/javascript">
 
     window.onload = function () {
-var pie = new GradientPie();
-pie.render(document.body);
-pie.setValue(0.6);
+        var pie = new GradientPie();
+        pie.render(document.getElementById("ap"));
+        pie.setValue(0.6);
     }
-    window.onresize = function () {
-
-    }
-
 </script>
+</head>
+<body>
+    <div id="ap" style="width=200px;height=200px" />
+</body>
 </html>
