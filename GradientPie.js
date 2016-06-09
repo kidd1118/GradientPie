@@ -161,7 +161,7 @@ GradientPie.prototype = {
         this.pvtFeSpecularLighting.setAttribute("surfaceScale", 1);
         this.pvtFeSpecularLighting.setAttribute("specularExponent", 50);
         this.pvtFeSpecularLighting.setAttribute("result", "specOut");
-        this.pvtFeSpecularLighting.setAttribute("lighting-color", "white");
+        this.pvtFeSpecularLighting.setAttribute("lighting-color", "gray");
         this.pvtFePointLight.setAttribute("x", 100000);
         this.pvtFePointLight.setAttribute("y", -50000);
         this.pvtFePointLight.setAttribute("z", 80000);
