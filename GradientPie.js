@@ -104,8 +104,9 @@ GradientPie.prototype = {
                 large: "0"
             };
         }
-
-        me.pvtDraw.call(me);
+	me.pvtInterval = setInterval(function () {
+            me.pvtDraw.call(me);
+        }, 1000);
     },
     /* public methods */
     prepareNode: function (nodeToAppend) {
@@ -293,8 +294,8 @@ GradientPie.prototype = {
 
         //if (!this.getWidth()) this.pvtSVG.setAttribute("width", this.options.radius * 2);
         //if (!this.getHeight()) this.pvtSVG.setAttribute("height", this.options.radius * 2);
-	this.pvtSVG.setAttribute("width", 200);
-	this.pvtSVG.setAttribute("height", 200);
+	this.pvtSVG.setAttribute("width", 250);
+	this.pvtSVG.setAttribute("height", 250);
 
         this.pvtCenter.x = Math.max(this.getWidth() / 2, this.options.radius);
         this.pvtCenter.y = Math.max(this.getHeight() / 2, this.options.radius);
@@ -345,10 +346,7 @@ GradientPie.prototype = {
         this.pvtTextDesc.style.fill = "#FFFFFF";
 
         this.refresh();
-        
-        this.pvtInterval = setInterval(function () {
-            me.pvtDraw.call(me);
-        }, 1000);
+        this.pvtDraw.call(me);
     },
 
     getValue: function (value) {
