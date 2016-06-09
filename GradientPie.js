@@ -93,7 +93,7 @@ GradientPie.prototype = {
         me.y = _coords.y;
 
         path.setAttribute("d", _d);
-	me.pvtText.textContent = (me.pvtData * 100).toFixed(0);
+        
         function getCoords() {
             var _rads = (me.pvtDrawAngle - 90) * Math.PI / 180.0;
             var _x = me.pvtCenter.x + (me.pvtRadius * Math.cos(_rads));
@@ -341,7 +341,7 @@ GradientPie.prototype = {
         this.pvtDrawAngle = 0;
 
         this.pvtText.style.fill = "gray";
-        //this.pvtText.textContent = (tmpValue).toFixed(0);
+        this.pvtText.textContent = (tmpValue).toFixed(0);
         this.pvtTextUnit.style.fill = "gray";
         this.pvtTextDesc.style.fill = "gray";
 
