@@ -343,12 +343,10 @@ GradientPie.prototype = {
         this.pvtTextDesc.style.fill = "#FFFFFF";
 
         this.refresh();
-
-        this.pvtDraw.call(me);
-
-        //this.pvtInterval = setInterval(function () {
-        //    me.pvtDraw.call(me);
-        //}, 1000);
+        
+        this.pvtInterval = setInterval(function () {
+            me.pvtDraw.call(me);
+        }, 1000);
     },
 
     getValue: function (value) {
