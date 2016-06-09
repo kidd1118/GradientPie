@@ -240,12 +240,9 @@ GradientPie.prototype = {
         this.pvtGs.setAttribute("filter", "url(#shadow2)");
 
         this.pvtText.style.fontSize = this.options.textSize + "px";
-        this.pvtText.style.color = "gray";
         this.pvtTextUnit.style.fontSize = "17px";
-        this.pvtTextUnit.style.color = "gray";
         this.pvtTextUnit.textContent = " %";
         this.pvtTextDesc.style.fontSize = "17px";
-        this.pvtTextDesc.style.color = "gray";
         this.pvtTextDesc.textContent = "Used"
         this.pvtTextDesc.className = "text";
 
@@ -343,10 +340,10 @@ GradientPie.prototype = {
         this.pvtData = tmpValue / 100;
         this.pvtDrawAngle = 0;
 
-        this.pvtText.style.fill = "#FFFFFF";
+        this.pvtText.style.fill = "gray";
         this.pvtText.textContent = (tmpValue).toFixed(0);
-        this.pvtTextUnit.style.fill = "#FFFFFF";
-        this.pvtTextDesc.style.fill = "#FFFFFF";
+        this.pvtTextUnit.style.fill = "gray";
+        this.pvtTextDesc.style.fill = "gray";
 
         this.refresh();
         this.pvtDraw.call(me);
