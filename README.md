@@ -1,3 +1,3 @@
 # GradientPie
 pie chart 
-(pie.png)
+(./pie.png)
