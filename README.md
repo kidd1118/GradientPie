@@ -1,2 +1,3 @@
 # GradientPie
-pie chart
+pie chart 
+(pie.png)
