@@ -1,3 +1,2 @@
 # GradientPie
-pie chart 
-(./pie.png)
+![pie chart](./pie.png)
